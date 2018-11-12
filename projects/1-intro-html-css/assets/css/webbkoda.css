@@ -1,0 +1,52 @@
+body {
+    Background: #ebebeb;
+    width: 800px;
+    height: 1000px;
+    /* lägg webbsidan i mitten */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* ram på body */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7c7c7c;
+    
+    /*avstånd till innehåll */
+    padding: 20px; 
+       }
+
+ /* typogradi */
+
+h1 {
+  color:green;              /* ändra färg på texten */
+  font-weight: 100;       /* göra texten smalare */
+  font-family: arial;     /* byta typ snitt */
+  font-size: 34px  /* ändra storlek på texten */
+    
+    
+}
+
+p{
+  font-family: arial;     /* byta typ snitt */
+   font-size: 14px;      /* ändra storlek på texten */
+    line-height: 200%     /* ändra radavstånd */
+         
+}
+
+section.main-content {
+    display: flex;
+    
+}
+img.flexbild{
+    height: 300px;
+}
+
+
+h3 {
+    color:green;
+    font-family: arial;
+}
+
+a {
+    color:red;
+}
