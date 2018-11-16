@@ -1,0 +1,37 @@
+@charset "utf-8";
+body {
+    align-items: center;
+    justify-content: center;
+}
+.luffarchackParent {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr
+        
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "footer footer footer";
+    
+}
+.luffarschack {
+    border: 1px solid black;
+    
+}
+
+.luffarschach:nth-child(1) {
+    grid-area: header;
+}
+
+.luffarschach:nth-child(2) {
+    grid-area: nav;
+}
+
+.luffarschach:nth-child(3) {
+    grid-area: nav;
+}
+
+.luffarschach:nth-child(4) {
+    grid-area: footer;
+}
