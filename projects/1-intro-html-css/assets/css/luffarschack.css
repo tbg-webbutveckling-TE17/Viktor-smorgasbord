@@ -3,35 +3,49 @@ body {
     align-items: center;
     justify-content: center;
 }
-.luffarchackParent {
+.luffarschackParent {
     display: grid;
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr
-        
+	grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "left main right"
-        "footer footer footer";
+        ". box1 ."
+        "box4 . box2"
+        ". box3 .";
     
 }
 .luffarschack {
-    border: 1px solid black;
+    height: 100%;
+    width: 100%;
     
 }
 
-.luffarschach:nth-child(1) {
-    grid-area: header;
+.luffarschack:nth-child(1) {
+    grid-area: box1;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 1px 1px;
 }
 
-.luffarschach:nth-child(2) {
-    grid-area: nav;
+.luffarschack:nth-child(2) {
+    grid-area: box2;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0px 1px 1px;
+   }
+
+.luffarschack:nth-child(3) {
+    grid-area: box3;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 1px 0px 1px
 }
 
-.luffarschach:nth-child(3) {
-    grid-area: nav;
-}
-
-.luffarschach:nth-child(4) {
-    grid-area: footer;
+.luffarschack:nth-child(4) {
+    grid-area: box4;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 1px 1px 0px
 }
