@@ -1,6 +1,6 @@
 # Välkommen till mitt smörgåsbord
 ## Generell info
-Mitt namn är Viktor och detta är mitt smårgåsbord
+Mitt namn är Viktor och detta är mitt smörgåsbord
 
 
 ### Att göra
