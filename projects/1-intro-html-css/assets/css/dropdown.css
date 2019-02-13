@@ -12,4 +12,40 @@ body {
     
 }
 
+.sublist {
+    opacity: 0.4;
+    display:none;
+}
+
+.sublist: hover {
+    display:block;
+}
+
+
+.sub {
+    opacity: 0.4;
+    display:none;
+}
+
+.sub: hover {
+    display:block;
+}
+
+.sub2 {
+    opacity: 0.4;
+    display:none;
+}
+
+.sub2: hover {
+    display:block;
+}
+
+.sub3 {
+  animation: cssAnimation 0s 2s forwards;
+  visibility: hidden;
+}
+
+.sub3: hover {
+    visibility: visible;
+}
 
