@@ -1,0 +1,115 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    
+   
+}
+
+.logo {
+    background: gray;
+    height: 60px;
+    flex: 1;
+    justify-content: flex-start;
+   
+    
+   
+}
+
+.mellan {
+    background: white;
+    flex: 1;
+}
+
+.banner {
+    background: gray;
+    height: 60px;
+    flex: 2;
+    justify-content: flex-end;
+ }
+
+.main {
+    background: ;
+    display: flex;
+}
+
+nav {
+    height: 40px;
+    background: gray;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.leftside, .middle, .rightside {
+    flex-direction: column;
+    
+}
+
+.nr1 {
+    height: 200px;
+    background: gray;
+    width: 520px;
+    margin-bottom: 10px;
+}
+
+.nr2 {
+    height: 200px;
+    width: 520px;
+    margin-bottom: 10px;
+    background: gray;
+}
+
+.nr3 {
+    height: 200px;
+    width: 520px;
+    margin-bottom:10px;
+    background: gray;
+     }
+
+.nr4 {
+    height: 250px;
+    width: 380px;
+    margin-left: 10px;
+    background: gray;
+    
+}
+
+.nr5 {
+    height: 360px;
+    width: 380px;
+    margin-left: 10px;
+    background: gray;
+    margin-top: 10px;
+
+}
+
+.nr6 {
+    height: 150px;
+    width: 327px;
+    margin-left: 10px;
+    background: gray;
+}
+
+.nr7 {
+    width: 327px;
+    height: 250px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: gray;
+}
+
+.nr8{
+    width: 327;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: gray;
+}
+
+footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background: gray;
+}
