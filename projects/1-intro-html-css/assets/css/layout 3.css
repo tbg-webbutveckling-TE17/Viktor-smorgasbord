@@ -58,6 +58,16 @@ ul {
     
 }
 
+
+.tjena figure img {
+    border: 0px red solid;
+    transition: .3s all;
+}
+
+.tjena figure img:hover {
+    border: 5px red solid
+}
+
 .tjena {
     display: flex;
     justify-content: center;
@@ -74,4 +84,19 @@ h1 {
 
 .rarr {
     margin-left: 100px;
+}
+
+.top {
+    background: gray;
+    width: 52%;
+}
+
+.mid {
+    background: lightgray;
+    width: 89%;
+}
+
+.bot {
+    background: lightgray;
+    width: 89%;
 }
