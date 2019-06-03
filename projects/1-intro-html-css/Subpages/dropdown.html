@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/dropdown.css">
-</head>
-<body>
-   <nav class="wrapper">
-       <ul> Start </ul>
-       <ul>Om oss</ul>
-       <ul>Produkter 
-       <li class="sub">Nätagregat</li>
-       <li class="sub2">Morderskort</li>
-       <li class="sub3">Processor  <ul class="sublist"> 
-            <li>+3</li>
-            <li>+5</li>
-            <li>+7</li>
-            <li>+9</li>
-       </ul></li>
-       </ul>
-       <ul>Vision</ul>
-       <ul>Kontakta oss</ul>
-   </nav>
-    
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link href="../assets/css/dropdown.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="navbar">
+                     <li class="dropdownParent">
+                         <a href="#">Start</a>
+                     </li>
+                    <li class="dropdownParent">
+                         <a href="#">Om Oss</a>
+                     </li>    
+                     <li class="dropdownParent">
+                         <a href="#">Produkter</a>
+                         <ul class="dropdown">
+                             <li class="linkColor"><a href="#">nätaggregat</a></li>
+                             <li class="linkColor"><a href="#">moderkort</a></li>
+                             <li class="dropdownParent2 linkColor"><a href="#">Processsdadsaor</a>
+                                 <ul class="dropdown2">
+                                     <li class="linkColor"><a href="#">+3</a></li>
+                                     <li class="linkColor"><a href="#">+5</a></li>
+                                     <li class="linkColor"><a href="#">+7</a></li>
+                                     <li class="linkColor"><a href="#">+9</a></li>
+                                 </ul>
+                             </li>
+                         </ul>
+                     </li>
+                     <li class="dropdownParent">
+                         <a href="#">Vision</a>
+                     </li>
+                     <li class="dropdownParent">
+                         <a href="#">Kontakta Oss</a>
+                     </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
 </html>
