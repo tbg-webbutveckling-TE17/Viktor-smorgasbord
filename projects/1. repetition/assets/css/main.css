@@ -1,1 +1,91 @@
-body{background-color:cornflowerblue}
+body{
+    background-image: url(http://flower-grower.com/wp-content/uploads/2019/02/background-colors-for-web-pages-web-page-color-code-best-page-background-color-code-for-full-colors-web-pages-r-codes-web-page-color-change-background-color-html-web-page.jpg);
+}
+.wrapper {
+    width: 80%;
+    min-height: 600px;
+    border: 1px solid gray;
+    margin: auto;
+
+}
+
+header {
+    color: #fff;
+}
+
+nav{
+    Height: 50px;
+    background: #8e44ad;
+}
+
+nav ul {
+    display: flex;  /*main axis = x */
+    flex-flow: row; /*row = x, column = y*/
+    height: 100%; 
+    justify-content:space-around; /*main axis */ 
+    align-items: center;  /*cross axis */
+    padding: 0;
+}
+
+nav ul li{ 
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: minmax(300px, auto) 25px;
+    grid-template-areas: 
+    "left mid right"
+    "bottom bottom bottom";
+
+}
+
+.left {
+    background: #3498db;
+    grid-area: left;
+   }
+
+.mid {
+    background: #e74c3c;
+    grid-area: mid;
+}
+
+.right {
+    background: #16a085;
+    grid-area: right;
+}
+
+.bottom {
+    background: #f39c12;
+    grid-area: bottom;
+}
+
+footer {
+    background: #34495e;
+    height: 175px;
+    
+}
+
+footer p {
+    margin: 0;
+}
+
+footer p:nth-child(odd) {
+    color:darkorange;
+    text-decoration: line-through;
+}
