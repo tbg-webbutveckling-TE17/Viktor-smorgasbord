@@ -50,14 +50,14 @@ var userInput = Number(prompt("Guess a number between 0-10"));
 
 if(userInput === secretNumber) {
     document.writeln("Grattis! Du har gissat rätt! <br>");
+} else if (userInput == 6|| userInput == 8) {
+    document.writeln("Det bränns! <br>");
 } else if (userInput < secretNumber){
     document.writeln("Du har gissat för lågt <br>");
 
 } else if (userInput > secretNumber) {
-    document.writeln("Du gissar för högt! <br>")
-} else (userInput == 6||8) {
-    document.writeln("Det bränns! <br>")
-}
+    document.writeln("Du gissar för högt! <br>");
+} 
 
 
 // if userInput === 6 or 8 "Det bränns"
