@@ -36,3 +36,34 @@ for (var i = 5; i < 50; i++) {
     }
     
 }
+
+var rows = 5;
+var cols = 5;
+
+for(var i = 0; i < rows; i++) {
+    for(var ii = 0; ii < cols; ii++) {
+        document.writeln("*")
+    }
+    document.writeln("<br/>")
+}
+
+var multiplier = 9
+for(var i = 0; i < 10; i++ ) {
+   var result = multiplier * i
+   document.writeln(multiplier + "*" + i + "=" + result + "<br/>")    
+}
+
+for (var multiplier = 0; multiplier <= 10; multiplier++) {
+    for(var i = 0; i <= 10; i++) {
+        var result = multiplier * i
+        document.writeln(multiplier + "*" + i + "=" + result + "<br/>")
+    }
+    document.writeln("<br/>")
+}
+var len = choices.length
+var choices = [ "sushi", "tacos", "kött", "kyckling"];   
+
+
+    
+
+
