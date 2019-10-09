@@ -60,10 +60,16 @@ for (var multiplier = 0; multiplier <= 10; multiplier++) {
     }
     document.writeln("<br/>")
 }
-var len = choices.length
+
+
 var choices = [ "sushi", "tacos", "kött", "kyckling"];   
+for(var i = 0; i < choices.length; i++) {
+    document.writeln("My #" + (i + 1) + " choice is " + choices[i] + "<br/>")
+}
 
-
+for(var i = 0; i < 7; i++ ) {
+    
+}
     
 
 
