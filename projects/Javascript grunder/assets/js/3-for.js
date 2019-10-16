@@ -67,9 +67,43 @@ for(var i = 0; i < choices.length; i++) {
     document.writeln("My #" + (i + 1) + " choice is " + choices[i] + "<br/>")
 }
 
-for(var i = 0; i < 7; i++ ) {
-    
+for(var i = 0; i < choices.length; i++ ) {
+    var choicenum = i + 1;
+    var choicesuffix;
+
+    if(choicenum == 1){
+        choicesuffix = "st";
+    } else if(choicenum == 2){
+        choicesuffix = "nd";
+    } else if(choicenum == 3){
+        choicesuffix = "rd";
+    } else(
+        choicesuffix = "th"
+    );
+    document.writeln("My " + choicenum + choicesuffix + " choice is " + choices[i] + "<br/>");
+} ("<br/>")
+
+for(var i = 10; i >= 0; i--) {
+   for(var ii = 0; ii <= i; ii++) {
+       document.write("* ")
+   }
+   document.write("<br/>")
 }
-    
 
-
+for(var i = 0; i <= 10; i++) {
+    for(var ii = 0; ii <= i; ii++) {
+        document.write("* ")
+    }
+    document.write("<br/>")
+}
+rows = 9;
+for (var i = 1; i <= rows; i++) {
+    for (var j = 0; j <= rows -i; j++) {
+       document.write("&nbsp"); 
+    }
+    for(var k = 1; k <= i; k++) {
+        document.write("* ");
+ 
+    }
+    document.write("<br>");
+  }
