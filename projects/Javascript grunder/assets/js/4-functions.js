@@ -41,16 +41,38 @@ console.log("4 squared is " + toSquare(8));
 var result = toSquare(5);
 console.log(result);
 
-function quadrupleMe(x); {
+function quadrupleMe(x) {
     return 4 * x;
 }
 var myFavNumber = quadrupleMe(2);
 console.log(myFavNumber);
 
 function isEven(x) {
-    return x && 2 ;
+    if (x % 2 === 0 ) {
+       return true;
+
+    } else{
+        return false;
+    }
+    
+} 
+
+console.log(isEven(10))
+
+function kebebToSnake(str) {
+    var newStr = str.replace(/-/g, "_");
+    return newStr;
 }
 
+console.log(kebebToSnake("This-is-a-kebab-cased-string"));
 
-console.log(isEven(10));
-console.log(isEven(15));
+function localScope() {
+    var showScope = 31;
+    console.log(showScope);
+}
+
+localScope();
+console.log(showScope);
+
+var showScope = "i'm a  global variable";
+console.log(showScope)
