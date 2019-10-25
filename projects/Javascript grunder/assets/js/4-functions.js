@@ -76,3 +76,54 @@ console.log(showScope);
 
 var showScope = "i'm a  global variable";
 console.log(showScope)
+
+var showGlobalVar = 99; //Global variable
+function globalScope() {
+    showGlobalVar = 100;
+    console.log(showGlobalVar);
+}
+
+console.log(showGlobalVar);
+globalScope();
+console.log(showGlobalVar);
+
+function hi() {
+    var name = "Gustaph";
+    console.log(name);
+}
+hi();
+
+function bye() {
+    console.log(name);
+}
+
+bye();
+// Named function
+function sing() {
+    console.log("im singing in the rain");
+    console.log("just singing in the rain");
+    console.log("What a glorious feeling!");
+}
+//Higher order function
+setInterval(sing, 2000); // #1
+clearInterval(1);
+setInterval(sing, 2000); // #2
+clearInterval(2);
+
+var intervalExample = setInterval(sing, 2000);
+clearInterval(intervalExample);
+
+// Anonomous function
+var anon = setInterval(function() {
+    console.log("I'm an anonomous function");
+}, 1500);
+clearInterval(anon);
+
+function myTimer() {
+    var d = new Date();
+    var time = d.toLocaleTimeString();
+    document.getElementById("timeOutput").innerHTML = time;
+}
+myTimer();
+
+var myTime = setInterval(myTimer, 1000);
