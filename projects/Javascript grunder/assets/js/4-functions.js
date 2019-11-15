@@ -127,3 +127,31 @@ function myTimer() {
 myTimer();
 
 var myTime = setInterval(myTimer, 1000);
+
+var stopBtn = document.getElementsByTagName("button")[0];
+stopBtn.addEventListener("mouseenter", function() {
+    clearInterval(myTime);
+    alert("Time is stopped!");
+
+});
+
+stopBtn.addEventListener("mouselave", function() {
+    myTime = setInterval(myTimer, 1000);
+});
+
+function calculateTip(total) {
+    var tipPercent = 0.15;
+    return total * tipPercent;
+}
+
+var billTotal = prompt("Quanto Costa?");
+var billTip = calculateTip(billTotal);
+var receipt = "Bill Total " + billTotal + ":- Tip " + billTip + ":-";
+var displayBill = document.getElementsByClassName("displayBill")[0];
+displayBill.innerHTML = receipt;
+
+function tellFortune(jobTitle, geoLoc, partner, kids) {
+    var tellFuture = "You will be a " + jobTitle + " in " + geoLoc + " with " + partner + " and " + kids;
+}
+
+tellFortune("Engineer", "Nebraska", "Ashley", 2);
