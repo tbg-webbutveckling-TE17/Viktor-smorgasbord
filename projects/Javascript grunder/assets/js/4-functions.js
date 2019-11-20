@@ -150,8 +150,17 @@ var receipt = "Bill Total " + billTotal + ":- Tip " + billTip + ":-";
 var displayBill = document.getElementsByClassName("displayBill")[0];
 displayBill.innerHTML = receipt;
 
+var displayFortune = document.getElementsByClassName("displayFortune")[0];
 function tellFortune(jobTitle, geoLoc, partner, kids) {
-    var tellFuture = "You will be a " + jobTitle + " in " + geoLoc + " with " + partner + " and " + kids;
+    var tellFuture = "You will be a " + jobTitle + " in " + geoLoc + " with " + partner + " and " + kids + " kids";
+displayFortune.innerHTML = tellFuture;
 }
 
 tellFortune("Engineer", "Nebraska", "Ashley", 2);
+
+ var myJobTitle = [Engineer, Pilot, Cashier, Waiter, Police]
+ var myGeoLoc = [Nabraska, London, Madrid, Stockholm, Dubai]
+ var myPartner = [Ashley, Hanna, Ann, Jennifer, Moa]
+ var myKids = [2, 5, 1, 3, 0]
+
+ tellFortune(myJobTitle, myGeoLoc, myPartner, myKids);
