@@ -144,23 +144,36 @@ function calculateTip(total) {
     return total * tipPercent;
 }
 
-var billTotal = prompt("Quanto Costa?");
-var billTip = calculateTip(billTotal);
-var receipt = "Bill Total " + billTotal + ":- Tip " + billTip + ":-";
-var displayBill = document.getElementsByClassName("displayBill")[0];
-displayBill.innerHTML = receipt;
+//var billTotal = prompt("Quanto Costa?");  
+//var billTip = calculateTip(billTotal);
+//var receipt = "Bill Total " + billTotal + ":- Tip " + billTip + ":-";
+//var displayBill = document.getElementsByClassName("displayBill")[0];
+//displayBill.innerHTML = receipt;
 
 var displayFortune = document.getElementsByClassName("displayFortune")[0];
 function tellFortune(jobTitle, geoLoc, partner, kids) {
-    var tellFuture = "You will be a " + jobTitle + " in " + geoLoc + " with " + partner + " and " + kids + " kids";
+    var tellFuture = "You will be a <strong>" + jobTitle + " </strong> in <strong>" + geoLoc + "</strong> with <strong>" + partner + "</strong> and <strong>" + kids + "</strong> kids";
 displayFortune.innerHTML = tellFuture;
 }
 
-tellFortune("Engineer", "Nebraska", "Ashley", 2);
+//tellFortune("Engineer", "Nebraska", "Ashley", 2);
 
- var myJobTitle = [Engineer, Pilot, Cashier, Waiter, Police]
- var myGeoLoc = [Nabraska, London, Madrid, Stockholm, Dubai]
- var myPartner = [Ashley, Hanna, Ann, Jennifer, Moa]
- var myKids = [2, 5, 1, 3, 0]
+ var myJobTitle = ["Engineer", "Pilot", "Cashier", "Waiter", "Police"]
+ var myGeoLoc = ["Nabraska", "London", "Madrid", "Stockholm", "Dubai"]
+ var myPartner = ["Ashley", "Hanna", "Ann", "Jennifer", "Emma"]
+ var myKids = [2, 5, 1, 3, 0];
 
- tellFortune(myJobTitle, myGeoLoc, myPartner, myKids);
+ var tellBtn = document.getElementsByTagName("button")[1];
+ tellBtn.addEventListener("click", function() {
+     var randomJob = myJobTitle[Math.floor(Math.random() * myJobTitle.length)];
+     var randomGeo = myGeoLoc[Math.floor(Math.random() * myGeoLoc.length)];
+     var randomPartner = myPartner[Math.floor(Math.random() * myPartner.length)];
+     var randomKids = myKids[Math.floor(Math.random() * myKids.length)];
+
+     tellFortune(randomJob, randomGeo, randomPartner, randomKids);
+ })
+ 
+ function calculateDogAge()
+ 
+
+
