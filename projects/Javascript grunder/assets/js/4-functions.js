@@ -173,7 +173,19 @@ displayFortune.innerHTML = tellFuture;
      tellFortune(randomJob, randomGeo, randomPartner, randomKids);
  })
  
- function calculateDogAge()
+ var calculateDogAge = prompt("How old is your dog in human years?")
+function calculateDogYears(calculateDogAge) {
+   var displayDogYears = document.getElementsByTagName("p") [3];
+   var dogYears = calculateDogAge * 7;
+   var tellDogYears = "Your dog is " + dogYears + " in dog years"
+   
+   displayDogYears.innerHTML = tellDogYears; 
+
+   
+}
+
+calculateDogYears(calculateDogAge)
+
  
 
 
