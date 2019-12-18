@@ -203,10 +203,24 @@ calculateSupply(yourAge,snackAmount)
 document.addEventListener("keypress", function(e){
     var guess = e.key
     console.log(guess)
+    for (i = 0; i <= answerArray.length; i++) {
+        if (guess == answerArray[i]) {
+            correctAnswer[i] == guess;
+            document.getElementsById("letters").innerHTML = correctAnswer;
+        }
+        guessesLeft--
+        document.getElementsById("letters").innerHTML = guessesLeft;
+    };
+    
 });
 
-var answerArray = ["G", "O", "A", "T"];
-var correctAnswer = ["_", "_", "_", "_"];
+
+
+
+var guessesLeft = 10;
+var answerArray = ["_", "_", "_", "_"];
+var correctAnswer =["G", "O", "A", "T"];
+
 
 
 
