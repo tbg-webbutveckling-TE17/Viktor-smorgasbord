@@ -31,8 +31,8 @@ printToScreen.innerHTML = colors.join(" <br /> ");
 colors.shift();
 printToScreen.innerHTML = colors.join(" <br /> ");
 
-var colorGreen = colors.slice(1, 2);
-printToScreen.innerHTML = colorsGreen.join(" <br />");
+//var colorGreen = colors.slice(1, 3);
+//printToScreen.innerHTML = colorsGreen.join(" <br />");
 
 var colorsCopy = colors.slice(colors);
 printToScreen.innerHTML = colorsCopy.join(" <br />");
@@ -51,3 +51,33 @@ var countries = ["sweden", "england", "austalia", "usa", "canada"];
 countries.forEach(function(country) {
     printToScreen.innerHTML = country + " ";
 });
+
+printToScreen.innerHTML = "";
+var planets = ["earth", "mars", "saturnus", "jupiter"];
+planets.forEach(function(planet) {
+    printToScreen.innerHTML +=planet + " - ";
+
+});
+
+printToScreen.innerHTML = "";
+var number = [1, 32, 44, 112, 3, 5, 6, 9, 12 ];
+var color = ["red", "green", "blue", "yellow" ];
+
+//number.forEach(function(color) {
+  //  if (color % 3 === 0 ) {
+    //    printToScreen.innerHTML += color + "";
+    //}
+//);
+
+for (var i = 0; i < number.length; i++){
+    if(number[i] % 3 === 0) {
+        printToScreen.innerHTML += number[i] + " "
+    }
+}
+printToScreen.innerHTML = "";
+var printReverse =[1, 2 , 3, 4, 5, 6, 7];
+for (var i = printReverse.length -1 ; i >= 0 ; i--){
+        printToScreen.innerHTML += printReverse[i] + " "
+}
+
+var isIdentical = 
