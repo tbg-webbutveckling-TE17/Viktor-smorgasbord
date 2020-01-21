@@ -79,5 +79,22 @@ var printReverse =[1, 2 , 3, 4, 5, 6, 7];
 for (var i = printReverse.length -1 ; i >= 0 ; i--){
         printToScreen.innerHTML += printReverse[i] + " "
 }
+function isIdentical(array) {
+    var first = array[0]
+    for (i = 1; i < array.length; i++) {
+        if (array[i] !== first) {
+            return false
+          }
 
-var isIdentical = 
+    }
+      
+    return true
+}
+
+isIdentical([1, 1, 1, 1, 1, 1, 1, 1]);
+
+function sumArray(array) {
+
+}
+
+sumArray([5, 56, 2, 18, 1, 12, 33]);
