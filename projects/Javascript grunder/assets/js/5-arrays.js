@@ -94,7 +94,25 @@ function isIdentical(array) {
 isIdentical([1, 1, 1, 1, 1, 1, 1, 1]);
 
 function sumArray(array) {
-
+    var sum = 0;
+    for(var i = 0; i < array.length; i++) {
+        sum += array[i]
+    }
+    printToScreen.innerHTML = sum;
 }
 
-sumArray([5, 56, 2, 18, 1, 12, 33]);
+sumArray([1, 2, 3, 4, 5 ]);
+
+function max(array) {
+    var maximum = array[0]
+    array.forEach(function(index) {
+        if(index > maximum) {
+            maximum = index
+        }
+        
+    })
+       return maximum
+        
+    
+}
+max([2, 1, 23, 54, 4, 12]);
