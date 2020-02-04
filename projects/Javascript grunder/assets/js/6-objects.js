@@ -53,21 +53,26 @@ output.innerHTML = junkObject.pet.species;
 
 var posts = [
     {
-        author = "Catlover",
-        title = "cats are gr8",
-        comments = "i have such and adorable cat"
+        author: "Catlover",
+        title: "Cats are gr8",
+        comments: ["I have such and adorable cat"]
     },
     {   
         
-        author = "dogs",
-        title = "dogs eat much",
-        comments = "i have a big dog"
+        author: "Dogking",
+        title: "Dogs eat much",
+        comments: ["i have a big dog"]
     },
     {    
-        author = "tiger",
-        title = "big cat",
-        comments = "he is such a big cat"
+        author: "Tiger",
+        title: "Big cat",
+        comments: ["he is such a big cat"]
     }
 ];
+posts.forEach(function(post) {
+output.innerHTML += "Author:" + post.author + " " + "<br/>Title: " + post.title + " " + "<br/>Comments: " + post.comments + "<br/><br/> ";
+});
 
-output.innerHTML = "Author" + posts[1].author;
+//output.innerHTML = "Author" + posts[1].author + "comments" + posts[1].comments;
+
+
