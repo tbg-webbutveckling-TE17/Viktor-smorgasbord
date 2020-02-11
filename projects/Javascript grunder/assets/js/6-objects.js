@@ -75,4 +75,50 @@ output.innerHTML += "Author:" + post.author + " " + "<br/>Title: " + post.title 
 
 //output.innerHTML = "Author" + posts[1].author + "comments" + posts[1].comments;
 
+var movies = [
+    {
+        title: "The Dark Knight", 
+        rating: "9.0",   
+        hasWatched: true     
+    },
+    {   
+        
+        title: "Joker",
+        rating: "8.5",  
+        hasWatched: false   
+    },
+    {    
+        title: "Lord of the rings: The kings return",
+        rating: "8.9",    
+        hasWatched:  true
+    },
+    {
+        title: "Inception",
+        rating: "8.7",     
+        hasWatched: false
+    },
+    {
+        title: "Spirited away",
+        rating: "8.5",     
+        hasWatched: true 
+    }
+];
+movies.forEach(function(movie){
+    if(movie.hasWatched == true) {
+        output.innerHTML += "Movie: " + movie.title + "<br/>IMDB Rating: " + movie.rating + "<br/>You have seen this movie" + "<br/><br/>";
+    }else{
+        output.innerHTML += "Movie: " + movie.title + "<br/>IMDB Rating: " + movie.rating + "<br/>You haven't seen this movie" + "<br/><br/>";
+    };
+});
+output.innerHTML = "";
+var count = {
+    text: "This is some text",
+    add: function(x, y) {
+        return x + y;  
+    },
+    rndmNmbr: 32
+};
+
+output.innerHTML = count.add(count.rndmNmbr, 5);
+
 
