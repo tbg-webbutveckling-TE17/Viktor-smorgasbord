@@ -120,5 +120,47 @@ var count = {
 };
 
 output.innerHTML = count.add(count.rndmNmbr, 5);
+output.innerHTML = ""
 
+var btnAddFriend = document.querySelector("aFriend"); 
+var btnRemoveFriend = document.querySelector("rFriend");
+var user = {
+    friend: ["Arnold", "Stallone", "Chuck"],
+    addFriend: function(frend) {
+        this.friend.push(frend);
+    },
+    removeFriend: function() {
+        this.friend.pop();
+    }
+};
 
+btnAddFriend.addEventListener("click", function() {
+    user.addFriend(prompt("Insert name of friend"));
+});
+btnRemoveFriend.addEventListener("click", removeMyFriend);
+
+function removefriend() {
+    user.removefriend();
+}
+
+output.innerHTML = ""
+
+// Hero object
+var btnDmgTaken = document.getElementsByTagName("button")[2];
+var btnManaRefill = document.getElementsByTagName("button")[3];
+var btnCastSpell = document.getElementsByTagName("button")[4];
+
+var hero = {
+    name: "Arne",
+    hp: 100,
+    mana: 30, 
+    dmgTaken: function() {
+        this.hp -= 5;
+    },
+    manaRefill: function() {
+        this.mana += 30;
+    },
+    castSpell: function() {
+        this.mana -= 25; 
+    }
+};

@@ -6,3 +6,31 @@ background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-2
 background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+img {
+    
+}
+section button {
+    padding: 10px;
+    text-shadow: 1px, 1px, 0px #000;
+    text-transform: uppercase;
+}
+
+section button::before {
+    content: "> ";
+}
+section button::after {
+    content: "! ";
+}
+
+section button:nth-child(1) {
+    background-color: red;
+}
+
+section button:nth-child(2) {
+    background-color: blue;
+}
+
+section button:nth-child(3) {
+    background-color: orange;
+}
