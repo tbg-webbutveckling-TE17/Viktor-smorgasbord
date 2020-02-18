@@ -122,8 +122,8 @@ var count = {
 output.innerHTML = count.add(count.rndmNmbr, 5);
 output.innerHTML = ""
 
-var btnAddFriend = document.querySelector("aFriend"); 
-var btnRemoveFriend = document.querySelector("rFriend");
+var btnAddFriend = document.querySelector(".aFriend"); 
+var btnRemoveFriend = document.querySelector(".rFriend");
 var user = {
     friend: ["Arnold", "Stallone", "Chuck"],
     addFriend: function(frend) {
@@ -139,28 +139,53 @@ btnAddFriend.addEventListener("click", function() {
 });
 btnRemoveFriend.addEventListener("click", removeMyFriend);
 
-function removefriend() {
+function removeMyFriend() {
     user.removefriend();
 }
 
 output.innerHTML = ""
 
 // Hero object
-var btnDmgTaken = document.getElementsByTagName("button")[2];
-var btnManaRefill = document.getElementsByTagName("button")[3];
-var btnCastSpell = document.getElementsByTagName("button")[4];
+// HTML element section
+var btnDmgTaken = document.getElementsByTagName("button")[0];
+var btnManaRefill = document.getElementsByTagName("button")[1];
+var btnCastSpell = document.getElementsByTagName("button")[2];
+var hpBar = document.querySelector(".hp");
+var manaBar = document.querySelector(".mana");
 
 var hero = {
     name: "Arne",
     hp: 100,
     mana: 30, 
     dmgTaken: function() {
+        if(this.hp <= 50) {
+            this.hp -= 5;
+            hpBar.innerHTML = this.hp + " Health is getting low!";
+        } else {
         this.hp -= 5;
+        hpBar.innerHTML = this.hp;
+    }
     },
     manaRefill: function() {
         this.mana += 30;
+        manaBar.innerHTML = this.mana
+
     },
     castSpell: function() {
         this.mana -= 25; 
+        manaBar.innerHTML = this.mana
     }
 };
+hpBar.innerHTML = hero.hp;
+manaBar.innerHTML = hero.mana;
+btnDmgTaken.addEventListener("click", function() {
+    hero.dmgTaken();    
+});
+
+btnManaRefill.addEventListener("click", function() {
+    hero.manaRefill();
+});
+
+btnCastSpell.addEventListener("click", function() {
+    hero.castSpell();
+});

@@ -1,36 +1,62 @@
 @charset "utf-8";
 
 body {
-    background: #009FFF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-img {
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+
 }
-section button {
+
+.Hero-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 5px;
+
+}
+
+.Hero-container .Heroimg {
+margin-bottom: 10px;
+}
+.Hero-button {
+    border: 3px double #FFF;
+}
+.Hero-button button {
     padding: 10px;
     text-shadow: 1px, 1px, 0px #000;
     text-transform: uppercase;
+    outline: none;
 }
 
-section button::before {
+.hp {
+    color: red;
+    text-shadow: 3px 3px 10px #FFF;
+}
+
+.mana {
+    color: blue;
+    text-shadow: 3px 3px 10px #FFF;
+}
+
+.Hero-button button::before {
     content: "> ";
 }
-section button::after {
+.Hero-button button::after {
     content: "! ";
 }
 
-section button:nth-child(1) {
+.Hero-button button:nth-child(1) {
     background-color: red;
 }
 
-section button:nth-child(2) {
+.Hero-button button:nth-child(2) {
     background-color: blue;
 }
 
-section button:nth-child(3) {
+.Hero-button button:nth-child(3) {
     background-color: orange;
 }
+
