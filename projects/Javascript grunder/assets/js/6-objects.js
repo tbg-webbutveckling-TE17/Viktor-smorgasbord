@@ -145,14 +145,16 @@ function removeMyFriend() {
 
 output.innerHTML = ""
 
-// Hero object
+
 // HTML element section
 var btnDmgTaken = document.getElementsByTagName("button")[0];
 var btnManaRefill = document.getElementsByTagName("button")[1];
 var btnCastSpell = document.getElementsByTagName("button")[2];
 var hpBar = document.querySelector(".hp");
 var manaBar = document.querySelector(".mana");
+var heroImg = document.querySelector(".Heroimg")
 
+//our hero object
 var hero = {
     name: "Arne",
     hp: 100,
@@ -160,7 +162,8 @@ var hero = {
     dmgTaken: function() {
         if(this.hp <= 50) {
             this.hp -= 5;
-            hpBar.innerHTML = this.hp + " Health is getting low!";
+            hpBar.innerHTML = this.hp + " - Health is getting low!";
+            heroImg.setAttribute("src", "assets/images/mage-bruised.png")
         } else {
         this.hp -= 5;
         hpBar.innerHTML = this.hp;
@@ -168,18 +171,31 @@ var hero = {
     },
     manaRefill: function() {
         this.mana += 30;
-        manaBar.innerHTML = this.mana
+        manaBar.innerHTML = this.mana;
 
     },
     castSpell: function() {
         this.mana -= 25; 
-        manaBar.innerHTML = this.mana
+        manaBar.innerHTML = this.mana;
+    },
+    gameOver: function() {
+        if(this.hp <= 0) {
+            hpBar.innerHTML = "Game Over!";
+            heroImg.setAttribute("src", "assets/images/mage-rip.png")
+            btnDmgTaken.classList.add("btnGameOver")
+        }
     }
+
+        
 };
+//Hp and mana bar
 hpBar.innerHTML = hero.hp;
 manaBar.innerHTML = hero.mana;
+
+// event listener
 btnDmgTaken.addEventListener("click", function() {
-    hero.dmgTaken();    
+    hero.dmgTaken(); 
+    hero.gameOver();
 });
 
 btnManaRefill.addEventListener("click", function() {
