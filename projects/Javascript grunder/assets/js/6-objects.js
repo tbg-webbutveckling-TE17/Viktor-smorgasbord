@@ -152,7 +152,8 @@ var btnManaRefill = document.getElementsByTagName("button")[1];
 var btnCastSpell = document.getElementsByTagName("button")[2];
 var hpBar = document.querySelector(".hp");
 var manaBar = document.querySelector(".mana");
-var heroImg = document.querySelector(".Heroimg")
+var heroImg = document.querySelector(".Heroimg");
+var btnRestart = document.querySelector(".btnRestart");
 
 //our hero object
 var hero = {
@@ -183,7 +184,26 @@ var hero = {
             hpBar.innerHTML = "Game Over!";
             heroImg.setAttribute("src", "assets/images/mage-rip.png")
             btnDmgTaken.classList.add("btnGameOver")
+            btnManaRefill.classList.add("btnGameOver")
+            btnCastSpell.classList.add("btnGameOver")
+            btnRestart.style.opacity = 1;
+            btnRestart.style.height = 50 + "px";
+            btnRestart.style.fontSize = 20 + "px";
+            btnRestart.classList.remove("disableBtnRestart")
         }
+        
+    },
+    restartGame: function() {
+        btnRestart.style.opacity = 0;
+        hpBar.innerHTML = hero.hp = 100;
+        manaBar.innerHTML = hero.mana = 30;
+        btnDmgTaken.classList.remove("btnGameOver")
+        btnManaRefill.classList.remove("btnGameOver")
+        btnCastSpell.classList.remove("btnGameOver")
+        heroImg.setAttribute("src", "assets/images/mage.png")
+        btnRestart.style.height = 0 + "px";
+        btnRestart.style.fontSize = 0 + "px";
+
     }
 
         
@@ -205,3 +225,7 @@ btnManaRefill.addEventListener("click", function() {
 btnCastSpell.addEventListener("click", function() {
     hero.castSpell();
 });
+
+btnRestart.addEventListener("click", function() {
+    hero.restartGame();
+})

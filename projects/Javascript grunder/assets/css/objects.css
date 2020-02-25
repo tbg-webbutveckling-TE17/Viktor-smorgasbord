@@ -64,3 +64,25 @@ margin-bottom: 10px;
     background-color: gray !important;
     pointer-events: none;
 }
+
+.disableBtnRestart {
+    pointer-events: none;
+}
+
+.btnRestart {
+    width: 100%;
+    height: 0px;
+    margin-top: 10px;
+    background-image: linear-gradient(to right, red, blue, yellow);
+    color: white;
+    font-weight: bold;
+    font-size: 0px;
+    font-family: cursive;
+    outline: none;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all 1.4s;
+
+}
+
+
