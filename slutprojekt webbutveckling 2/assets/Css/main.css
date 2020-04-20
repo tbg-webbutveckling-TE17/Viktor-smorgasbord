@@ -11,6 +11,15 @@ header {
     width: 100%;
 }
 
+.topbarlinks {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    
+}
+
+
 .Sellingitems {
         width: 80%;
         height: 500px;
